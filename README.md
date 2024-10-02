@@ -20,8 +20,8 @@ This is design layout of multiple cards organized in a Bento grid. Users should 
 
 ### Links
 
-- [Live Site URL]()
-- [Solution URL]()
+- [Live Site URL](https://debabratabanik.github.io/bento-grid-main/)
+- [Solution URL](https://www.frontendmentor.io/solutions/bento-grid-main-oM0AKT1Sy7)
 
 ### Built with
 
