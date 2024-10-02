@@ -20,7 +20,7 @@ body{
 }
 
 img{
-  max-width: 100%;
+  width: 100%;
 }
 
 .wrapper{
@@ -29,24 +29,24 @@ img{
   align-items: center;
   justify-content: center;
   padding-block: 2rem;
+  background-color: hsl(31, 66%, 97%);
 }
 
 .grid__container{
   width: 90%;
-  border: 1px solid black;
   display: grid;
   gap: 2rem;
 }
 
 article{
   padding: 1rem;
+  border-radius: .7rem;
 }
 
 .card1{
   background-color: var(--purple-500);
   text-align: center;
   color: white;
-  border-radius: .8rem;
 
   & img{
     width: 65%;
@@ -72,3 +72,268 @@ article{
   color: var(--yellow-100);
 }
 
+.card2{
+  background-color: white;
+  max-height: 12.22rem; 
+}
+.card2__text{
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -1.75px;
+}
+
+.card3{
+  background-color: var(--yellow-500);
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 12.22rem;
+  overflow: hidden;
+
+  & img{
+    width: 70%;
+  }
+}
+.card3__text{
+  margin-block: 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -1.75px;
+}
+
+.card4{
+  background-color: var(--purple-100);
+  text-align: center;
+}
+.card4__title{
+  margin-block: 1rem 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -1.75px;
+}
+.card4__text{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card5{
+  background-color: var(--purple-500);
+  text-align: center;
+  color: white;
+
+  & img{
+    width: 75%;
+  }
+}
+
+.card5__text{
+  font-size: 1.6rem;
+  margin-inline: 2rem;
+  font-weight: 500;
+  line-height: 0.9;
+  margin-bottom: 0.2rem;
+}
+
+.card6{
+  background-color: white;
+  padding: 1.2rem;
+
+  & img{
+    width: 60%;
+  }
+}
+
+.card6__text{
+  font-weight: 500;
+  font-size: 1rem;
+  margin-block: 0 1rem;
+
+  & span{
+    font-size: 2.7rem;
+    font-weight: 500;
+  }
+}
+
+.card7{
+  background-color: var(--yellow-100);
+  padding: 1.5rem;
+
+  & img{
+    width: 65%;
+  }
+}
+.card7__text{
+  margin-block: 0 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -1.75px;
+
+  & span{
+    color: var(--purple-500);
+    font-style: italic;
+  }
+}
+
+.card8{
+  background-color: var(--yellow-500);
+
+  & img{
+    width: 70%;
+  }
+}
+
+.card8__text{
+  margin-block: 0.5rem 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -1.75px;
+}
+
+@media (min-width: 40rem){
+  .card1 { grid-area: card1; }
+  .card2 { grid-area: card2; }
+  .card3 { grid-area: card3; }
+  .card4 { grid-area: card4; }
+  .card5 { grid-area: card5; }
+  .card6 { grid-area: card6; }
+  .card7 { grid-area: card7; }
+  .card8 { grid-area: card8; }
+
+  .grid__container{
+    overflow: hidden;
+    grid-template-areas: 
+    "card7 card1"
+    "card4 card4"
+    "card2 card3"
+    "card5 card5"
+    "card6 card8";
+  }
+}
+
+@media (min-width: 60rem){
+
+  .wrapper{
+    padding-block: 4rem;
+  }
+  .grid__container{
+    grid-gap: 1.5rem;
+    max-width: 53rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "card7 card1 card1 card4"
+    "card7 card2 card3 card4"
+    "card8 card2 card3 card4"
+    "card8 card6 card5 card5";
+  }
+
+  .card7{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & img{
+      width: 100%;
+    }
+  }
+  .card7__text{
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  
+  .card1{
+    padding-top: 1.5rem;
+
+    & img{
+      width: 40%;
+    }
+  }
+
+  .card4{
+    padding: 1.5rem;
+    padding-right: 0;
+    text-align: left;
+    width: 217px;
+    overflow: hidden;
+
+    & img{
+      width: 300px;
+    }
+  }
+  .card4__title{
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+  }
+  .card4__text{
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    line-height: 1.1;
+  }
+
+  .card2{
+    width: 225px;
+    overflow: hidden;
+
+    & img{
+      width: 280px;
+    }
+  }
+  .card2__text{
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+
+  .card3 img{
+    width: 100%;
+  }
+  .card3__text{
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+
+  
+  .card8{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+     & img{
+       width: 100%;
+     }
+  }
+  .card8__text{
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .card6 img{
+    width: 80%;
+  }
+  .card6__text{
+    font-size: 0.85rem;
+
+    & span{
+      font-size: 3rem;
+    }
+  }
+
+  .card5{
+    display: flex;
+    align-items: center;
+
+    & img{
+      width: 40%;
+    }
+  }
+  .card5__text{
+    text-align: left;
+    font-size: 1.75rem;
+    margin: 0 0 0 1rem;
+  }
+}
