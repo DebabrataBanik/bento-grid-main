@@ -207,6 +207,7 @@ article{
   .card8 { grid-area: card8; }
 
   .grid__container{
+    max-width: 35rem;
     overflow: hidden;
     grid-template-areas: 
     "card7 card1"
@@ -214,6 +215,20 @@ article{
     "card2 card3"
     "card5 card5"
     "card6 card8";
+  }
+
+  .card7{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & img{
+      width: 100%;
+    }
+  }
+  .card7__text{
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 
@@ -233,19 +248,7 @@ article{
     "card8 card6 card5 card5";
   }
 
-  .card7{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    & img{
-      width: 100%;
-    }
-  }
-  .card7__text{
-    font-size: 2rem;
-    font-weight: 500;
-  }
+  
   
   .card1{
     padding-top: 1.5rem;
