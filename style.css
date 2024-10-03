@@ -34,6 +34,7 @@ img{
 
 .grid__container{
   width: 90%;
+  max-width: 30rem;
   display: grid;
   gap: 2rem;
 }
@@ -74,7 +75,7 @@ article{
 
 .card2{
   background-color: white;
-  max-height: 12.22rem; 
+  max-height: 13.5rem; 
 }
 .card2__text{
   font-size: 1.4rem;
@@ -90,7 +91,7 @@ article{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-height: 12.22rem;
+  max-height: 13.5rem;
   overflow: hidden;
 
   & img{
@@ -182,6 +183,7 @@ article{
 
 .card8{
   background-color: var(--yellow-500);
+  padding: 1.5rem;
 
   & img{
     width: 70%;
@@ -196,7 +198,9 @@ article{
   letter-spacing: -1.75px;
 }
 
-@media (min-width: 40rem){
+
+@media (min-width: 50rem){
+
   .card1 { grid-area: card1; }
   .card2 { grid-area: card2; }
   .card3 { grid-area: card3; }
@@ -206,15 +210,19 @@ article{
   .card7 { grid-area: card7; }
   .card8 { grid-area: card8; }
 
+  .wrapper{
+    padding-block: 4rem;
+  }
   .grid__container{
-    max-width: 35rem;
-    overflow: hidden;
+    width: 95%;
+    grid-gap: 1.5rem;
+    max-width: 60rem;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-    "card7 card1"
-    "card4 card4"
-    "card2 card3"
-    "card5 card5"
-    "card6 card8";
+    "card7 card1 card1 card4"
+    "card7 card2 card3 card4"
+    "card8 card2 card3 card4"
+    "card8 card6 card5 card5";
   }
 
   .card7{
@@ -230,25 +238,6 @@ article{
     font-size: 2rem;
     font-weight: 500;
   }
-}
-
-@media (min-width: 60rem){
-
-  .wrapper{
-    padding-block: 4rem;
-  }
-  .grid__container{
-    grid-gap: 1.5rem;
-    max-width: 53rem;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-    "card7 card1 card1 card4"
-    "card7 card2 card3 card4"
-    "card8 card2 card3 card4"
-    "card8 card6 card5 card5";
-  }
-
-  
   
   .card1{
     padding-top: 1.5rem;
@@ -257,12 +246,15 @@ article{
       width: 40%;
     }
   }
+  .card1__title{
+    font-size: 3.25rem;
+  }
 
   .card4{
     padding: 1.5rem;
     padding-right: 0;
     text-align: left;
-    width: 217px;
+    /* width: 217px; */
     overflow: hidden;
 
     & img{
@@ -272,24 +264,26 @@ article{
   .card4__title{
     margin-right: 1rem;
     margin-top: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 500;
   }
   .card4__text{
     margin-right: 1rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 0;
     line-height: 1.1;
   }
 
   .card2{
-    width: 225px;
+    /* width: 225px; */
     overflow: hidden;
 
     & img{
-      width: 280px;
+      width: 310px;
     }
   }
   .card2__text{
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-weight: 500;
   }
 
@@ -311,7 +305,7 @@ article{
      }
   }
   .card8__text{
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 500;
   }
 
@@ -336,7 +330,7 @@ article{
   }
   .card5__text{
     text-align: left;
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin: 0 0 0 1rem;
   }
 }
